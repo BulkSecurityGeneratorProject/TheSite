@@ -1,0 +1,25 @@
+{
+    "wienerApp": {
+        "chest": {
+            "home": {
+                "title": "Chests",
+                "createLabel": "Chest erstellen",
+                "createOrEditLabel": "Chest erstellen oder bearbeiten"
+            },
+            "created": "Chest erstellt mit ID {{ param }}",
+            "updated": "Chest aktualisiert mit ID {{ param }}",
+            "deleted": "Chest gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Chest {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Chest"
+            },
+            "name": "Name",
+            "type": "Type",
+            "rollPrice": "Roll Price",
+            "numOfTimesRolled": "Num Of Times Rolled",
+            "chestItem": "Chest Item"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "wienerApp": {
+        "moneyTransfer": {
+            "home": {
+                "title": "MoneyTransfers",
+                "createLabel": "Egy új Money Transfer létrehozása",
+                "createOrEditLabel": "Hozzon létre, vagy módosítson Money Transfert"
+            },
+            "created": "Egy új Money Transfer lett létrehozva {{ param }} azonosítóval",
+            "updated": "A Money Transfer módosítva lett {{ param }} azonosítóval",
+            "deleted": "A Money Transfer törölve lett {{ param }} azonosítóval",
+            "delete": {
+                "question": "Biztos benne, hogy törölni szeretné az Money Transfert {{ id }} azonosítóval?"
+            },
+            "detail": {
+                "title": "Money Transfer"
+            },
+            "payedAmount": "Payed Amount",
+            "payedTime": "Payed Time",
+            "payedInCurrency": "Payed In Currency",
+            "paymentSuccessful": "Payment Successful",
+            "paymentMode": "Payment Mode"
+        }
+    }
+}

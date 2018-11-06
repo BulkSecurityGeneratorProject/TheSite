@@ -1,0 +1,43 @@
+entity MoneyTransfer {
+	payedAmount Integer
+    payedTime LocalDate
+    payedInCurrency String
+    paymentSuccessful Boolean
+    paymentMode String
+    //payedBy
+}
+
+entity Chest {
+	name String
+    type String
+    rollPrice Integer
+    numOfTimesRolled Long
+}
+
+entity ChestItem {
+	name String
+    type String
+    price Integer
+    numOfTimesRolled Long
+    numOfTimesAccepted Long
+}
+
+entity Transaction {
+	address String
+    notes String
+    name String
+}
+
+enum Language {
+    ENGLISH, RUSSIAN, HUNGARIAN, GERMAN
+}
+
+relationship OneToMany {
+	Chest{chestItem} to ChestItem
+}
+
+relationship ManyToMany {
+	Transaction{chestItem} to ChestItem{transaction}
+}
+
+paginate Transaction, MoneyTransfer with infinite-scroll

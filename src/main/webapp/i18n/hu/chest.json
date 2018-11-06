@@ -1,0 +1,25 @@
+{
+    "wienerApp": {
+        "chest": {
+            "home": {
+                "title": "Chests",
+                "createLabel": "Egy új Chest létrehozása",
+                "createOrEditLabel": "Hozzon létre, vagy módosítson Chestt"
+            },
+            "created": "Egy új Chest lett létrehozva {{ param }} azonosítóval",
+            "updated": "A Chest módosítva lett {{ param }} azonosítóval",
+            "deleted": "A Chest törölve lett {{ param }} azonosítóval",
+            "delete": {
+                "question": "Biztos benne, hogy törölni szeretné az Chestt {{ id }} azonosítóval?"
+            },
+            "detail": {
+                "title": "Chest"
+            },
+            "name": "Name",
+            "type": "Type",
+            "rollPrice": "Roll Price",
+            "numOfTimesRolled": "Num Of Times Rolled",
+            "chestItem": "Chest Item"
+        }
+    }
+}

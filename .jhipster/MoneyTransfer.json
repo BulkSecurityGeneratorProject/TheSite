@@ -1,0 +1,35 @@
+{
+    "name": "MoneyTransfer",
+    "fields": [
+        {
+            "fieldName": "payedAmount",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "payedTime",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "payedInCurrency",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "paymentSuccessful",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "paymentMode",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20181105131012",
+    "entityTableName": "money_transfer",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

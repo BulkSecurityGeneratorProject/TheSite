@@ -1,0 +1,42 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.wiener.app",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "5.6.0",
+    "applicationType": "monolith",
+    "baseName": "wiener",
+    "packageName": "com.wiener.app",
+    "packageFolder": "com/wiener/app",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MjMzMTcyY2E5YjZjZjhkNjEyZTdjYjMyYWE5ZWRmMGIzYTgzMjAyNTRkOTk3MTcxNzY0MWI2NjAxZmViMTExZjRlNjIxZmFkNGQ5ODVkYTc3NzVjYzY0N2JiZDZiYzAzYmY4MzQ3NjllM2JlZWEyNzdmYTc2Y2IzOGNhMjA2YWQ=",
+    "clientFramework": "angularX",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [
+      "cucumber"
+    ],
+    "jhiPrefix": "jhi",
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "en",
+      "de",
+      "hu",
+      "ru"
+    ]
+  }
+}

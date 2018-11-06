@@ -1,0 +1,38 @@
+{
+    "name": "Chest",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rollPrice",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "numOfTimesRolled",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "chestItem",
+            "otherEntityName": "chestItem",
+            "otherEntityRelationshipName": "chest"
+        }
+    ],
+    "changelogDate": "20181105131013",
+    "entityTableName": "chest",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

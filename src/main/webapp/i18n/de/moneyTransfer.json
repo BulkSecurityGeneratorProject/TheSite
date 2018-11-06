@@ -1,0 +1,25 @@
+{
+    "wienerApp": {
+        "moneyTransfer": {
+            "home": {
+                "title": "Money Transfers",
+                "createLabel": "Money Transfer erstellen",
+                "createOrEditLabel": "Money Transfer erstellen oder bearbeiten"
+            },
+            "created": "Money Transfer erstellt mit ID {{ param }}",
+            "updated": "Money Transfer aktualisiert mit ID {{ param }}",
+            "deleted": "Money Transfer gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Money Transfer {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Money Transfer"
+            },
+            "payedAmount": "Payed Amount",
+            "payedTime": "Payed Time",
+            "payedInCurrency": "Payed In Currency",
+            "paymentSuccessful": "Payment Successful",
+            "paymentMode": "Payment Mode"
+        }
+    }
+}

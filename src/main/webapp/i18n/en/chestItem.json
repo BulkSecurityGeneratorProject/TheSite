@@ -1,0 +1,27 @@
+{
+    "wienerApp": {
+        "chestItem": {
+            "home": {
+                "title": "Chest Items",
+                "createLabel": "Create a new Chest Item",
+                "createOrEditLabel": "Create or edit a Chest Item"
+            },
+            "created": "A new Chest Item is created with identifier {{ param }}",
+            "updated": "A Chest Item is updated with identifier {{ param }}",
+            "deleted": "A Chest Item is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Chest Item {{ id }}?"
+            },
+            "detail": {
+                "title": "Chest Item"
+            },
+            "name": "Name",
+            "type": "Type",
+            "price": "Price",
+            "numOfTimesRolled": "Num Of Times Rolled",
+            "numOfTimesAccepted": "Num Of Times Accepted",
+            "chest": "Chest",
+            "transaction": "Transaction"
+        }
+    }
+}

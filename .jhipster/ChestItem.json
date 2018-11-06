@@ -1,0 +1,49 @@
+{
+    "name": "ChestItem",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "numOfTimesRolled",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "numOfTimesAccepted",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "chest",
+            "otherEntityName": "chest",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "transaction",
+            "otherEntityName": "transaction",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "chestItem"
+        }
+    ],
+    "changelogDate": "20181105131014",
+    "entityTableName": "chest_item",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

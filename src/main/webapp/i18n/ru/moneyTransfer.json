@@ -1,0 +1,25 @@
+{
+    "wienerApp": {
+        "moneyTransfer": {
+            "home": {
+                "title": "Money Transfers",
+                "createLabel": "Создать новый Money Transfer",
+                "createOrEditLabel": "Создать или отредактировать Money Transfer"
+            },
+            "created": "Новый Money Transfer создан с идентификатором {{ param }}",
+            "updated": "Money Transfer обновлен с идентификатором {{ param }}",
+            "deleted": "Money Transfer удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Money Transfer {{ id }}?"
+            },
+            "detail": {
+                "title": "Money Transfer"
+            },
+            "payedAmount": "Payed Amount",
+            "payedTime": "Payed Time",
+            "payedInCurrency": "Payed In Currency",
+            "paymentSuccessful": "Payment Successful",
+            "paymentMode": "Payment Mode"
+        }
+    }
+}

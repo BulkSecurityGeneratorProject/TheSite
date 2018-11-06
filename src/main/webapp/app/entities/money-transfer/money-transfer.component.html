@@ -1,0 +1,62 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="wienerApp.moneyTransfer.home.title">Money Transfers</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-money-transfer" [routerLink]="['/money-transfer/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="wienerApp.moneyTransfer.home.createLabel">
+            Create new Money Transfer
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="moneyTransfers">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="payedAmount"><span jhiTranslate="wienerApp.moneyTransfer.payedAmount">Payed Amount</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="payedTime"><span jhiTranslate="wienerApp.moneyTransfer.payedTime">Payed Time</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="payedInCurrency"><span jhiTranslate="wienerApp.moneyTransfer.payedInCurrency">Payed In Currency</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="paymentSuccessful"><span jhiTranslate="wienerApp.moneyTransfer.paymentSuccessful">Payment Successful</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="paymentMode"><span jhiTranslate="wienerApp.moneyTransfer.paymentMode">Payment Mode</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
+            <tr *ngFor="let moneyTransfer of moneyTransfers ;trackBy: trackId">
+                <td><a [routerLink]="['/money-transfer', moneyTransfer.id, 'view' ]">{{moneyTransfer.id}}</a></td>
+                <td>{{moneyTransfer.payedAmount}}</td>
+                <td>{{moneyTransfer.payedTime | date:'mediumDate'}}</td>
+                <td>{{moneyTransfer.payedInCurrency}}</td>
+                <td>{{moneyTransfer.paymentSuccessful}}</td>
+                <td>{{moneyTransfer.paymentMode}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/money-transfer', moneyTransfer.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/money-transfer', moneyTransfer.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'money-transfer/'+ moneyTransfer.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

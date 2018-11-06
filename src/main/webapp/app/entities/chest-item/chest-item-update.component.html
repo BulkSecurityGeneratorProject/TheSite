@@ -1,0 +1,56 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-chest-item-heading" jhiTranslate="wienerApp.chestItem.home.createOrEditLabel">Create or edit a Chest Item</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!chestItem.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="chestItem.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="wienerApp.chestItem.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                        [(ngModel)]="chestItem.name" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="wienerApp.chestItem.type" for="field_type">Type</label>
+                    <input type="text" class="form-control" name="type" id="field_type"
+                        [(ngModel)]="chestItem.type" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="wienerApp.chestItem.price" for="field_price">Price</label>
+                    <input type="number" class="form-control" name="price" id="field_price"
+                        [(ngModel)]="chestItem.price" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="wienerApp.chestItem.numOfTimesRolled" for="field_numOfTimesRolled">Num Of Times Rolled</label>
+                    <input type="number" class="form-control" name="numOfTimesRolled" id="field_numOfTimesRolled"
+                        [(ngModel)]="chestItem.numOfTimesRolled" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="wienerApp.chestItem.numOfTimesAccepted" for="field_numOfTimesAccepted">Num Of Times Accepted</label>
+                    <input type="number" class="form-control" name="numOfTimesAccepted" id="field_numOfTimesAccepted"
+                        [(ngModel)]="chestItem.numOfTimesAccepted" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="wienerApp.chestItem.chest" for="field_chest">Chest</label>
+                    <select class="form-control" id="field_chest" name="chest" [(ngModel)]="chestItem.chest" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="chestOption.id === chestItem.chest?.id ? chestItem.chest : chestOption" *ngFor="let chestOption of chests; trackBy: trackChestById">{{chestOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

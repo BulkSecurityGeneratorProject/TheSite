@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="transaction">
+            <h2><span jhiTranslate="wienerApp.transaction.detail.title">Transaction</span> {{transaction.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="wienerApp.transaction.address">Address</span></dt>
+                <dd>
+                    <span>{{transaction.address}}</span>
+                </dd>
+                <dt><span jhiTranslate="wienerApp.transaction.notes">Notes</span></dt>
+                <dd>
+                    <span>{{transaction.notes}}</span>
+                </dd>
+                <dt><span jhiTranslate="wienerApp.transaction.name">Name</span></dt>
+                <dd>
+                    <span>{{transaction.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="wienerApp.transaction.chestItem">Chest Item</span></dt>
+                <dd>
+                    <span *ngFor="let chestItem of transaction.chestItems; let last = last">
+                        <a [routerLink]="['/chest-item', chestItem?.id, 'view' ]">{{chestItem.id}}</a>{{last ? '' : ', '}}
+                    </span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/transaction', transaction.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
